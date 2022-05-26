@@ -1,7 +1,16 @@
 @keyframes collapse {
-     from{
+    0% {
+        transform: scaleY(0)
+        
+    }
+    80% {
           
-     }
+        transform: scaleY(0.5)
+    }
+    100% {
+         
+        transform: scaleY(1)
+    }
 }
 .profile i{
      position: absolute;
@@ -52,25 +61,30 @@
      color: #fff;
      
 }
-.container-submenu .submenu .item-menu a{
+.submenu .item-menu a:hover{
+     background-color: #1d1b31;
+
+} 
+.submenu .item-menu a{
      padding-left: 30px;
 }
-
 .submenu.collapse{
      display: block;
-     margin-top: 1.3rem;
-     margin-bottom: 0.5rem;      
-     transition: linear 0.4s ease-in-out;
+     visibility: visible;
+     margin-top: 1rem;
+     margin-bottom: 0.5rem;
+     transform: scaleY(1);
+     transition:linear  0.5s ease-in;
+     transition-delay: 0.1s;    
 }
-
-
 .submenu{
      margin-top: 0rem;
      display: none;
-     flex-direction: column;    
+     visibility: hidden;   
      overflow: hidden;
-     transition: linear 0.4s ease-in-out;
-     
+     transform: scaleY(0);    
+     transition:linear .5s ease-out;
+     transition-delay: 0.1s;         
 }
 .item-menu .tooltip{
      position: absolute;
@@ -109,7 +123,7 @@
      padding: 5px 16px;
      border-radius: 50px;
 }
-.menu .item-menu:hover a{
+.menu .item-menu a:hover{
      background-color: #fff;  
      color: #555;
 }
