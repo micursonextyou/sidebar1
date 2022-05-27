@@ -1,3 +1,139 @@
+.icon-sun{
+    color: #ffa500;
+    text-shadow: 0px 0px 16px #ffa500;
+}
+.btn-color-mode-switch input[type=checkbox]:checked + label.btn-color-mode-switch-inner::before{
+     content: attr(data-off);
+     right: auto;
+     left: 20px;
+     
+}
+.btn-color-mode-switch input[type=checkbox]:checked + label.btn-color-mode-switch-inner::after{
+     content: attr(data-on);
+     left: 68px;
+     background-color: #3c3c3c;
+     
+}
+.btn-color-mode-switch input[type=checkbox]:checked + label.btn-color-mode-switch-inner{
+     background-color: #151515;
+     color: #ffffff;
+}
+.btn-color-mode-switch input[type=checkbox]{
+     cursor: pointer;
+     position: absolute;
+     opacity: 0;
+     width: 25px;
+     height: 25px;
+     top: 0;
+     z-index: 1;
+     margin: 0;
+}
+.btn-container .btn-color-mode-switch> label.btn-color-mode-switch-inner::after{
+     content: attr(data-off);
+     position: absolute;
+     border-radius: 26px;
+     background: #ffffff;
+     width: 70px;
+     height: 26px;
+     left: 2px;
+     top:2px;
+     text-align: center;
+     transition: all .3s ease;
+     box-shadow: 0px 0px 6px -2px #111;
+     padding: 5px 0;
+     
+}
+.btn-container .btn-color-mode-switch> label.btn-color-mode-switch-inner::before{
+     content: attr(data-on);
+     position: absolute;
+     font-size: 12px;
+     font-weight: 500;
+     top:7px;
+     right: 20px;
+}
+.btn-container .btn-color-mode-switch> label.btn-color-mode-switch-inner{
+     margin: 0;
+     width: 140px;
+     height: 30px;
+     background: #E0E0E0;
+     border-radius: 26px;
+     overflow: hidden;
+     position: relative;
+     transition: all .3s ease;
+     display: block;
+}
+
+.btn-container .btn-color-mode-switch{
+     position: relative;
+     margin: 0;
+     display: inline-block;
+     width: 140px;
+     margin: 0 10px;
+}
+.btn-container label{
+     font-size: 13px;
+     color: #424242;
+     font-weight: 500;
+}
+.btn-container i{
+     display: inline-block;
+     position: relative;
+     font-size: 1.5rem;
+     font-weight: 500;
+}
+.btn-container{
+     display: table-cell;
+     vertical-align: middle;
+     text-align: center;
+}
+.input-radio input[type=radio]:not(:checked) + a>svg>#dot{
+     visibility: hidden;
+     
+}
+.input-radio input[type=radio]:checked + a>svg>#dot{
+     visibility: visible;
+     
+}
+.input-radio .dot svg{
+     margin-right: 10px;
+}
+.input-radio .dot{
+     height: 30px!important;
+     line-height: 30px;
+     margin-left: 10px;
+     align-items: center;
+     text-align: center;
+     vertical-align: middle;
+     display: flex;
+}
+.input-radio{
+     position: relative;
+     display: block;
+     height: 30px;
+     line-height: 30px;
+     align-items: center;
+    
+}
+.input-radio input{
+     position: absolute;
+     visibility: hidden;
+     right: 0;
+}
+.config-panel-skyn3{
+     display: flex;
+     flex-direction: row;
+     margin-bottom: 1rem;
+}
+.config-panel-skyn2{
+     display: flex;
+     flex-direction: row;
+     margin-bottom: 1rem;
+}
+.config-panel-skyn{
+     display: flex;
+     flex-direction: row;
+     margin-bottom: 1rem;
+}
 .content-input-radio input[type=radio]:not(:checked)+i{
      background: #f0f0f0;
 }
@@ -51,13 +187,10 @@
      right: 0;
 }
 .config-panel-skyn2 .content-input-radio{
-     margin: 25px 25px!important;
+     margin: 5px 5px!important;
      
 }
-.config-panel-skyn2{
-     display: inline-block;
-     margin-top: 1rem;
-}
+
 .slider.round:before{
      border-radius: 50%;
 }
@@ -123,10 +256,7 @@ input:checked + .slider{
      border-radius: 30px;
      
 }
-.config-panel-skyn{
-     display: flex;
-     flex-direction: column;
-}
+
 .sidebar.expand .menu .item-menu .tooltip{
      display: none;
 }
